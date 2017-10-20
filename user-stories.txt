@@ -1,0 +1,13 @@
+Jako klient chcia³bym poznaæ dostêpne ubezpieczenia oraz ich warianty.
+
+Jako klient chcia³bym poznaæ cenê ubezpiecznia.
+
+Jako klient chcia³bym mieæ mo¿liwoœæ zawrzeæ ubezpieczenie.
+
+Jako klient muszê mieæ mo¿liwoœæ przegl¹dania swoich aktualnych ubezbieczenieñ oraz mieæ dostêp do historii swoich ubezpieczeñ.
+
+Jako klient muszê mieæ mo¿liwoœæ zobaczyæ informacjê o moich ubezpieczeniach.
+
+Jako klient chcia³bym moæ przed³u¿yæ swoje ubezpieczenie.
+
+Jako klient chcia³bym mieæ mo¿liwoœæ rezygnacji z ubezpieczenia.
