@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+app/public/css/mdb.min.css
+app/public/js/mdb.min.js
+app/public/js/mdb.js
+.idea
