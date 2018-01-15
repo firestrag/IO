@@ -7,4 +7,9 @@ return [
 		'action' => 'index',
 	],
 
+    'logowanie' => [
+        'url' => [],
+        'controller' => 'Frontend_Index',
+        'action' => 'login',
+    ]
 ];

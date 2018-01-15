@@ -17,6 +17,7 @@ class Controller_Frontend_Index extends Controller{
         }else{
             $this->action_login();
         }
+//        echo "sad"; die();
 //        $this->action_logout();
 	}
 
