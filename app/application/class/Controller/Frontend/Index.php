@@ -4,6 +4,8 @@ class Controller_Frontend_Index extends Controller{
 
     private $auth = null;
 
+
+
     public function __construct(){
         parent::__construct();
         $this->auth = new Account_IO;
@@ -13,7 +15,7 @@ class Controller_Frontend_Index extends Controller{
 
     public function action_index(){
         if(Account_Core::isLogin()){
-            $this->action_changePassword();
+            $this->action_mainPage();
         }else{
             $this->action_login();
         }
@@ -33,14 +35,14 @@ class Controller_Frontend_Index extends Controller{
 	public function action_login(){
 	    $try_login = false;
 
-        if(isset($_POST['action'])){
+        if(isset($_POST['action_login'])){
 
             $this->auth->login();
             $try_login = true;
-
         }
 
         if( $this->auth->isLogin() ){
+            var_dump('zalogowano');
             $this->action_index();
             return;
         }
@@ -52,7 +54,25 @@ class Controller_Frontend_Index extends Controller{
     }
 
     public function action_mainPage(){
+        $this->action_insurancesList();
+    }
 
+    public function action_insurancesList(){
+
+        $user = [
+            'id' => 0,
+            'name' => 'name',
+            'lastname' => 'lastname'
+        ];
+        $insurances = [
+            [
+                ''
+            ]
+        ];
+
+        $this->template->view = Power_View::factory('Frontend/Index/insurancesList')
+            ->bind('insurances', $insurances)
+            ->bind('user',$user);
     }
 
 

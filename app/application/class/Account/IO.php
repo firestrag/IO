@@ -9,10 +9,12 @@ class Account_IO extends Account_Core {
     }
 
     public function login(){
-//        $user = Model_Radius::getUserById($_POST['id']);
-//        $user_data = self::getUserById($i)
+        $user = Model_User::get($_POST['id']);
+        if(!$user){
+            return false;
+        }
 
-
+        parent::setLoginId($user[0]['ID']);
 
         return true;
     }

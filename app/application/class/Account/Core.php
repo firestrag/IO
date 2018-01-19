@@ -8,6 +8,10 @@ abstract class Account_Core{
         return isset($_SESSION[self::$_login_id]);
     }
 
+    protected static function setLoginId($id){
+        $_SESSION[self::$_login_id] = $id;
+    }
+
     abstract function login();
 
     public function logout(){
