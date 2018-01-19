@@ -1,7 +1,3 @@
-<?php
-
-//var_dump($users_list);
-
 <!--Navigation-->
 <header style="height: 100%">
 
@@ -23,13 +19,15 @@
                             <div style="background-color: #ffffff">
                                 <select class="mdb-select" style="background-color: #ffffff">
                                     <option value="" disabled selected>Wybierz swoje konto</option>
-                                    <option value="1">Klient 1</option>
-                                    <option value="2">Klient 2</option>
-                                    <option value="3">Klient 3</option>
+                                    <?php foreach( $users_list as $user): ?>
+                                        <option value="<?= $user['id']?>"><?=$user['imie'].' '.$user['nazwisko']?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
 
-                            <button type="button" class="btn btn-success btn-rounded">Zaloguj</button>
+                            <input type="hidden" name="action_login" value="1" />
+
+                            <button type="submit"" class="btn btn-success btn-rounded">Zaloguj</button>
 
                         </form>
 
