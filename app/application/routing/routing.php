@@ -20,14 +20,22 @@ return [
     ],
 
     'wszystkie-ubezpieczenia' => [
-        'ulr' => [],
+        'url' => [],
         'controller' => 'Frontend_Index',
         'action' => 'insurancesAll'
     ],
 
-    'twoje-ubezpieczenia' => [
-        'ulr' => [],
+    'zawrzyj-ubezpieczenie' => [
+        'url' => ['insurance_id'],
         'controller' => 'Frontend_Index',
-        'action' => 'insurancesList'
+        'action' => 'addInsurance',
+        'insurance_id' => 0
+    ],
+
+    'twoje-ubezpieczenia' => [
+        'url' => ['insurance_id'],
+        'controller' => 'Frontend_Index',
+        'action' => 'insurancesList',
+
     ]
 ];
