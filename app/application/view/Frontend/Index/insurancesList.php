@@ -33,6 +33,9 @@ foreach ($insurances as $insurance):?>
                 <p class="orange-text mt-1 d-flex flex-row-reverse">
                     Cena za miesiąc: <?=$insurance['price_per_month']?>zł
                 </p>
+                <p>
+                    <a href="zawrzyj-ubezpieczenie/<?=$insurance['id']?>"><button type="submit"" class="btn btn-success btn-rounded">Przedłuż o miesiąc</button></a>
+                </p>
             </div>
             <!--/.Card content-->
 
