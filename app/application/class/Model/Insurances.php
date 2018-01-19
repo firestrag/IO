@@ -1,6 +1,6 @@
 <?php
 
-class model_Insurances extends Model{
+class Model_Insurances extends Model{
 
     static private $_table_name = 'klienci';
 
@@ -9,5 +9,7 @@ class model_Insurances extends Model{
         return parent::get($id);
     }
 
-    
+    public static function add($id, $user_id, $date_start, $date_end){
+
+    }
 }
