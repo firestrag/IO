@@ -15,19 +15,19 @@ return [
 
     'wyloguj' => [
         'ulr' => [],
-        'controller' => 'Fronted_Index',
+        'controller' => 'Frontend_Index',
         'action' => 'logout'
     ],
 
     'wszystkie-ubezpieczenia' => [
         'ulr' => [],
-        'controller' => 'Fronted_Index',
+        'controller' => 'Frontend_Index',
         'action' => 'insurancesAll'
     ],
 
     'twoje-ubezpieczenia' => [
         'ulr' => [],
-        'controller' => 'Fronted_Index',
+        'controller' => 'Frontend_Index',
         'action' => 'insurancesList'
     ]
 ];

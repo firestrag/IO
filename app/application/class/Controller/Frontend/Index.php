@@ -26,9 +26,10 @@ class Controller_Frontend_Index extends Controller{
 
 	public function action_logout(){
         $this->auth->logout();
-        $this->template->view = Power_View::factory('Frontend/Index/login')
-            ->bind('try_login', false)
-            ->bind('try_logout', true);
+        $this->action_index();
+//        $this->template->view = Power_View::factory('Frontend/Index/login')
+//            ->bind('try_login', false)
+//            ->bind('try_logout', true);
     }
 
 
