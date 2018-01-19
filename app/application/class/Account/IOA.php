@@ -1,15 +1,15 @@
 <?php
 
-class Account_IO extends Account_Core {
+class Account_IOA extends Account_Core {
 
 
     public static function getUserById($id){
         $id = (int)$id;
-        return DB::query(DB::SELECT, "SELECT * FROM `klienci` WHERE `id` = $id");
+        return DB::query(DB::SELECT, "SELECT * FROM `pracownicy` WHERE `id` = $id");
     }
 
     public function login(){
-        $user = Model_User::get($_POST['id']);
+        $user = Model_Admin::get($_POST['id']);
         if(!$user){
             return false;
         }
@@ -24,7 +24,7 @@ class Account_IO extends Account_Core {
     }
 
     public function getUsersList(){
-        return DB::query(DB::SELECT, "SELECT `id`, `imie`, `nazwisko` FROM `klienci`");
+        return DB::query(DB::SELECT, "SELECT `id`, `imie`, `nazwisko` FROM `pracownicy`");
     }
 
 }
