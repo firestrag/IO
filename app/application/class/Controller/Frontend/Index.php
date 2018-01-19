@@ -26,9 +26,10 @@ class Controller_Frontend_Index extends Controller{
 
 	public function action_logout(){
         $this->auth->logout();
-        $this->template->view = Power_View::factory('Frontend/Index/login')
-            ->bind('try_login', false)
-            ->bind('try_logout', true);
+        $this->action_index();
+//        $this->template->view = Power_View::factory('Frontend/Index/login')
+//            ->bind('try_login', false)
+//            ->bind('try_logout', true);
     }
 
 
@@ -66,8 +67,33 @@ class Controller_Frontend_Index extends Controller{
         ];
         $insurances = [
             [
-                ''
-            ]
+                'name' => 'Wycieczka zagraniczma',
+                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
+                'price_per_month' => '1920',
+                'date_start' => '2017-03-12',
+                'date_end' => '2017-04-11',
+            ],
+            [
+                'name' => 'Wycieczka zagraniczma',
+                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
+                'price_per_month' => '1920',
+                'date_start' => '2017-03-12',
+                'date_end' => '2017-04-11',
+            ],
+            [
+                'name' => 'Wycieczka zagraniczma',
+                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
+                'price_per_month' => '1920',
+                'date_start' => '2017-03-12',
+                'date_end' => '2017-04-11',
+            ],
+            [
+                'name' => 'Wycieczka zagraniczma',
+                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
+                'price_per_month' => '1920',
+                'date_start' => '2017-03-12',
+                'date_end' => '2017-04-11',
+            ],
         ];
 
         $this->template->view = Power_View::factory('Frontend/Index/insurancesList')
