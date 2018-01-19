@@ -107,7 +107,7 @@ class Controller_Frontend_Index extends Controller{
             [
                 'id' => '1',
                 'name' => 'Wycieczka zagraniczna',
-                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
+                'description' => 'Wycieczka zagraniczna do arabskiego burdelu',
                 'price_per_month' => '1920',
                 'date_start' => '2017-03-12',
                 'date_end' => '2017-04-11',
@@ -117,16 +117,16 @@ class Controller_Frontend_Index extends Controller{
                 'name' => 'Wycieczka w Polsce',
                 'description' => 'Obóz rekreacyjny',
                 'price_per_month' => '999',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
+                'date_start' => '2018-03-12',
+                'date_end' => '2018-04-11',
             ],
             [
                 'id' => '3',
                 'name' => 'Ubezpieczenie rodzinne',
                 'description' => 'Ubezpieczenie całej rodziny na wakacyjny wyjazd',
                 'price_per_month' => '3200',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
+                'date_start' => '2018-07-12',
+                'date_end' => '2018-08-11',
             ],
         ];
 
