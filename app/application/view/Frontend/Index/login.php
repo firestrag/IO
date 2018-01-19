@@ -1,8 +1,8 @@
 <!--Navigation-->
-<header style="height: 100%">
+<main style="height: 100%;background-image: url('public/img/1.jpg');">
 
     <!-- Intro Section -->
-    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('public/img/1.jpg');">
+    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="">
         <div class="full-bg-img">
             <div class="container flex-center">
                 <div class="row smooth-scroll">
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-</header>
+</main>
 
 
 
