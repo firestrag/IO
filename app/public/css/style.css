@@ -24,3 +24,7 @@
 b, strong{
     font-weight: bold;
 }
+
+html, body{
+    height: 100%;
+}

@@ -17,7 +17,7 @@
     <!-- Material Design for Bootstrap -->
     <link href="public/css/mdb.min.css" rel="stylesheet">
     <!-- my css -->
-    <link href="public/css/style.css" rel="stylesheet">
+    <link href="public/css/style.css?v=1" rel="stylesheet">
 
     <!-- jQuery -->
     <script type="text/javascript" src="public/js/jquery-3.2.1.min.js"></script>
