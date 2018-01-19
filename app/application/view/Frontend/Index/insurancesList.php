@@ -31,7 +31,7 @@ foreach ($insurances as $insurance):?>
                 <p class="card-text mr-2 ml-2"><?=$insurance['description']?></p>
 
                 <p class="orange-text mt-1 d-flex flex-row-reverse">
-                    Cena za miesiąc<h5 class="waves-effect p-2"><?=$insurance['price_per_month']?> <i class="fa fa-chevron-right"></i></h5>
+                    Cena za miesiąc: <?=$insurance['price_per_month']?>zł
                 </p>
             </div>
             <!--/.Card content-->
