@@ -35,6 +35,11 @@ return [
         'controller' => 'Frontend_Index',
         'action' => 'insurancesAll'
     ],
+    'wszystkie-ubezpieczenia-admin' => [
+        'url' => [],
+        'controller' => 'Frontend_Admin',
+        'action' => 'insurancesAll'
+    ],
     'zawrzyj-ubezpieczenie' => [
         'url' => ['insurance_id'],
         'controller' => 'Frontend_Index',

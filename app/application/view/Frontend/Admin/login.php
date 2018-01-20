@@ -12,6 +12,8 @@
                                 <strong>Ubezpieczenia turystyczne</strong>
                             </h2>
 
+                            <h4 class="subtext-header mt-4 mb-5"><p>Panel Administracyjny</p></h4>
+
 <!--                            <h4 class="subtext-header mt-4 mb-5"><p>Ubezpieczenie turystyczne pozwala objąć ochroną zarówno podróż zagraniczną, jak i krajową.</p>-->
 <!--                                <p>Szeroki zakres ochrony, możesz wybrać wariant dostosowany do swoich potrzeb.</p></h4>-->
                         </div>

@@ -8,7 +8,7 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="wszystkie-ubezpieczenia">Dodaj ubezpieczenie</a>
+                    <a class="nav-link" href="wszystkie-ubezpieczenia-admin">Dodaj ubezpieczenie</a>
                 </li>
 
             </ul>
