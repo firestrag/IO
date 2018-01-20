@@ -23,9 +23,10 @@ class Controller_Frontend_Admin extends Controller{
 
     public function action_logout(){
         $this->auth->logout();
-        $this->template->view = Power_View::factory('Frontend/Admin/login')
-            ->bind('try_login', false)
-            ->bind('try_logout', true);
+        $this->action_index();
+//        $this->template->view = Power_View::factory('Frontend/Admin/login')
+//            ->bind('try_login', false)
+//            ->bind('try_logout', true);
     }
 
 
