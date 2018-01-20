@@ -10,15 +10,15 @@ class Account_IOA extends Account_Core {
 
     public function login(){
 //        var_dump('dsa22');die();
-        $user = Model_Admin::get($_POST['id']);
+        $admin = Model_Admin::get($_POST['id']);
 //        var_dump($user);die();
-        if(!$user){
+        if(!$admin){
             return false;
         }
 
 
 
-        parent::setLoginId($user[0]['ID']);
+        parent::setLoginId($admin[0]['ID']);
 
         return true;
     }

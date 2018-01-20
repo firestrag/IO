@@ -25,6 +25,11 @@ return [
         'controller' => 'Frontend_Index',
         'action' => 'logout'
     ],
+    'wyloguj-admin' => [
+        'url' => [],
+        'controller' => 'Frontend_Admin',
+        'action' => 'logout'
+    ],
     'wszystkie-ubezpieczenia' => [
         'url' => [],
         'controller' => 'Frontend_Index',
