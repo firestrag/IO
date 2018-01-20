@@ -41,7 +41,7 @@ class Controller_Frontend_Admin extends Controller{
         }
 
         if( $this->auth->isLogin() ){
-            var_dump('zalogowano');
+//            var_dump('zalogowano');
             $this->action_index();
             return;
         }
@@ -53,7 +53,12 @@ class Controller_Frontend_Admin extends Controller{
     }
 
     public function action_mainPage(){
-        $this->action_insurancesAll();
+//        $this->action_insurancesAll();
+        $this->action_adminPanel();
+    }
+
+    public function  action_adminPanel(){
+        $this->template->view = Power_View::factory('Frontend/Admin/adminPanel');
     }
 
     public function  action_insurancesAll(){
@@ -64,8 +69,8 @@ class Controller_Frontend_Admin extends Controller{
                 'name' => 'Wycieczka zagraniczna',
                 'description' => 'Wycieczka zagraniczna za granice :)',
                 'price_per_month' => '6666',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
+                'date_start' => '2018-03-12',
+                'date_end' => '2018-04-11',
             ],
             [
                 'id' => '2',
@@ -89,6 +94,9 @@ class Controller_Frontend_Admin extends Controller{
             ->bind('insurances', $insurances);
     }
 
+    public function  action_addInsurance(){
+        var_dump(Power_Params::getParam(1)); die();
+    }
 
 
 }

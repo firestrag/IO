@@ -2,7 +2,6 @@
 
 echo View::factory('Frontend/Admin/menu')
     ->render();
-
 ?>
 
 <div style="height: 100px"></div>
@@ -34,7 +33,7 @@ echo View::factory('Frontend/Admin/menu')
                                 Cena: <?=$insurance['price_per_month']?>zł
                             </p>
                             <p>
-                                <a href="zawrzyj-ubezpieczenie/<?=$insurance['id']?>"><button type="submit"" class="btn btn-success btn-rounded">Wybierz</button></a>
+                                <a href="zawrzyj-ubezpieczenie-admin/<?=$insurance['id']?>"><button type="submit" class="btn btn-success btn-rounded">Wybierz</button></a>
                             </p>
                         </div>
 

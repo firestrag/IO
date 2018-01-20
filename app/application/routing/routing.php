@@ -46,6 +46,12 @@ return [
         'action' => 'addInsurance',
         'insurance_id' => 0
     ],
+    'zawrzyj-ubezpieczenie-admin' => [
+        'url' => ['insurance_id'],
+        'controller' => 'Frontend_Admin',
+        'action' => 'addInsurance',
+        'insurance_id' => 0
+    ],
     'twoje-ubezpieczenia' => [
         'url' => ['insurance_id'],
         'controller' => 'Frontend_Index',
