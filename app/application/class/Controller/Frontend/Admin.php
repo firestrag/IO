@@ -6,17 +6,17 @@ class Controller_Frontend_Admin extends Controller{
 
     public function __construct(){
         parent::__construct();
-        $this->auth = new Account_IO;
+        $this->auth = new Account_IOA;
 //        $this->template = new P
     }
 
 
     public function action_index(){
-//        if(Account_Core::isLogin()){
-//            $this->action_changePassword();
-//        }else{
+        if(Account_Core::isLogin()){
+            $this->action_mainPage();
+        }else{
             $this->action_login();
-//        }
+        }
 //        $this->action_logout();
     }
 
@@ -32,8 +32,8 @@ class Controller_Frontend_Admin extends Controller{
     public function action_login(){
         $try_login = false;
 
-        if(isset($_POST['action'])){
 
+        if(isset($_POST['action_login'])){
             $this->auth->login();
             $try_login = true;
 
@@ -44,10 +44,10 @@ class Controller_Frontend_Admin extends Controller{
             return;
         }
 
-        $users_list = $this->auth->getUsersList();
+        $admin_list = $this->auth->getAdminsList();
         $this->template->view = Power_View::factory('Frontend/Admin/login')
             ->bind('try_login', $try_login)
-            ->bind('users_list',$users_list);
+            ->bind('admin_list',$admin_list);
     }
 
     public function action_mainPage(){

@@ -19,20 +19,26 @@ return [
         'action' => 'login',
     ],
 
+    'admin-login' => [
+        'url' => [],
+        'controller' => 'Frontend_Admin',
+        'action' => 'login',
+    ],
+
     'wyloguj' => [
-        'ulr' => [],
+        'url' => [],
         'controller' => 'Frontend_Index',
         'action' => 'logout'
     ],
 
     'wszystkie-ubezpieczenia' => [
-        'ulr' => [],
+        'url' => [],
         'controller' => 'Frontend_Index',
         'action' => 'insurancesAll'
     ],
 
     'twoje-ubezpieczenia' => [
-        'ulr' => [],
+        'url' => [],
         'controller' => 'Frontend_Index',
         'action' => 'insurancesList'
     ]
