@@ -14,6 +14,7 @@ abstract class Account_Core{
     }
 
     protected static function setLoginId($id){
+
         $_SESSION[self::$_login_id] = $id;
     }
 
