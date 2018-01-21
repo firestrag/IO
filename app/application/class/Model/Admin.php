@@ -9,5 +9,9 @@ class Model_Admin extends Model{
         return parent::get($id);
     }
 
+    public static function getAll(){
+        parent::$_table_name = self::$__table_name;
+        return parent::getAll();
+    }
 
 }

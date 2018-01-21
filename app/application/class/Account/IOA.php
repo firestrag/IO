@@ -4,23 +4,25 @@ class Account_IOA extends Account_Core {
 
 
     public static function getAdminById($id){
-        $id = (int)$id;
-        return DB::query(DB::SELECT, "SELECT * FROM `pracownicy` WHERE `id` = $id");
+        return Model_Admin::get($id);
     }
 
     public function login(){
-//        var_dump('dsa22');die();
         $admin = Model_Admin::get($_POST['id']);
-//        var_dump($user);die();
         if(!$admin){
             return false;
         }
 
-
-
         parent::setLoginId($admin[0]['ID']);
+        parent::setAccountType('admin');
+//        $_SESSION['Account_Core__type'] = 'admin';
+
 
         return true;
+    }
+
+    public static function isLogin(){
+        return parent::isLogin('admin');
     }
 
     public function getId(){
@@ -28,7 +30,7 @@ class Account_IOA extends Account_Core {
     }
 
     public function getAdminsList(){
-        return DB::query(DB::SELECT, "SELECT `id`, `imie`, `nazwisko` FROM `pracownicy`");
+        return Model_Admin::getAll();
     }
 
 }

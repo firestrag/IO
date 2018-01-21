@@ -12,7 +12,7 @@ class Controller_Frontend_Admin extends Controller{
 
 
     public function action_index(){
-        if(Account_Core::isLogin()){
+        if(Account_Core::isLogin('admin')){
             $this->action_mainPage();
         }else{
             $this->action_login();
@@ -35,10 +35,11 @@ class Controller_Frontend_Admin extends Controller{
 
 
         if(isset($_POST['action_login'])){
-            $this->auth->login();
+            $this->auth->login('admin');
             $try_login = true;
 
         }
+
 
         if( $this->auth->isLogin() ){
 //            var_dump('zalogowano');
@@ -46,7 +47,10 @@ class Controller_Frontend_Admin extends Controller{
             return;
         }
 
+
+
         $admin_list = $this->auth->getAdminsList();
+//        var_dump($admin_list); die();
         $this->template->view = Power_View::factory('Frontend/Admin/login')
             ->bind('try_login', $try_login)
             ->bind('admin_list',$admin_list);

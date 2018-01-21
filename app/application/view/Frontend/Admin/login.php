@@ -1,6 +1,6 @@
 <main style="height: 100%;background-image: url('public/img/1.jpg');">
 
-    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="">
+    <div id="home" class="" data-jarallax='{"speed": 0.2}' style="padding-top:100px">
         <div class="full-bg-img">
             <div class="container flex-center">
                 <div class="row smooth-scroll">
@@ -17,10 +17,10 @@
                         </div>
                         <form method="post" action="admin-login">
                             <div style="background-color: #ffffff">
-                                <select name="id" class="mdb-select" style="background-color: #ffffff">
-                                    <option value="" disabled selected>Wybierz konto administratora</option>
+                                <select  name="id" class="mdb-select" style="background-color: #ffffff">
+                                    <option value="" disabled selected>&nbsp;Wybierz konto administratora</option>
                                     <?php foreach( $admin_list as $admin): ?>
-                                        <option value="<?= $admin['id']?>"><?=$admin['imie'].' '.$admin['nazwisko']?></option>
+                                        <option value="<?= $admin['ID']?>"><?=$admin['imie'].' '.$admin['nazwisko']?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
