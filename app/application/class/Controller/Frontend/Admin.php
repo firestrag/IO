@@ -29,6 +29,13 @@ class Controller_Frontend_Admin extends Controller{
 //            ->bind('try_logout', true);
     }
 
+    public function action_addInsurance(){
+
+        Model_Insurances::create($_POST['name'],$_POST['description'],$_POST['price'],$_POST['max_price']);
+
+        $this->action_mainPage();
+    }
+
 
     public function action_login(){
         $try_login = false;
@@ -96,10 +103,6 @@ class Controller_Frontend_Admin extends Controller{
 
         $this->template->view = Power_View::factory('Frontend/Admin/insurancesAll')
             ->bind('insurances', $insurances);
-    }
-
-    public function  action_addInsurance(){
-        var_dump(Power_Params::getParam(1)); die();
     }
 
 

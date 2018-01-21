@@ -34,11 +34,16 @@ echo View::factory('Frontend/Admin/menu')
                             <label for="input_name">Nazwa</label>
                         </div>
 
-                        <br/>
                         <div class="md-form">
                             <i class="fa fa-money prefix"></i>
                             <input id="input_price" class="form-control validate" type="text" name="price" value="" required pattern="\d+(\.\d{2})"/>
-                            <label for="input_price"  data-error="sdadsa">Cena</label>
+                            <label for="input_price"  data-error="Błędna stawka cenowa">Cena</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-money prefix"></i>
+                            <input id="input_price_nax" class="form-control validate" type="text" name="max_price" value="" required pattern="\d+(\.\d{2})"/>
+                            <label for="input_price_max"  data-error="Błędna stawka cenowa">Maksymalne odszkodowanie</label>
                         </div>
 
                         <button type="submit" class="btn btn-primary waves-effect waves-light">Dodaj</button>
