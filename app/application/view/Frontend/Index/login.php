@@ -1,6 +1,6 @@
 <main style="height: 100%;background-image: url('public/img/1.jpg');">
 
-    <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="">
+    <div id="home" class="" data-jarallax='{"speed": 0.2}' style="padding-top:100px">
         <div class="full-bg-img">
             <div class="container flex-center">
                 <div class="row smooth-scroll">
@@ -25,7 +25,7 @@
 
                             <input type="hidden" name="action_login" value="1" />
 
-                            <button type="submit"" class="btn btn-success btn-rounded">Zaloguj</button>
+                            <button type="submit" class="btn btn-success btn-rounded">Zaloguj</button>
 
                         </form>
 
