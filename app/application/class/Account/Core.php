@@ -26,6 +26,7 @@ abstract class Account_Core{
 
     public function logout(){
         unset($_SESSION[self::$_login_id]);
+        unset($_SESSION[self::$_account_type]);
     }
 
 }
