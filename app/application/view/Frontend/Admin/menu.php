@@ -5,13 +5,13 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="wszystkie-ubezpieczenia-admin">Dodaj ubezpieczenie</a>
-                </li>
-
-            </ul>
+<!--            <ul class="navbar-nav mr-auto">-->
+<!---->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="wszystkie-ubezpieczenia-admin">Dodaj ubezpieczenie</a>-->
+<!--                </li>-->
+<!---->
+<!--            </ul>-->
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link"  href="wyloguj-admin"><i class="fa fa-sign-out" aria-hidden="true"> Wyloguj</i></a>
