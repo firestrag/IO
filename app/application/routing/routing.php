@@ -56,5 +56,12 @@ return [
         'url' => ['insurance_id'],
         'controller' => 'Frontend_Index',
         'action' => 'insurancesList',
-    ]
+    ],
+
+
+    'dodaj-ubezpieczenie' => [
+    'url' => [],
+    'controller' => 'Frontend_Admin',
+    'action' => 'addInsurance'
+],
 ];
