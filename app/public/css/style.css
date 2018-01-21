@@ -36,3 +36,7 @@ html, body{
 main{
     height: 100%;
 }
+
+label::after{
+    width:150px;
+}
