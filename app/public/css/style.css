@@ -24,3 +24,19 @@
 b, strong{
     font-weight: bold;
 }
+
+html, body{
+    height: 100%;
+}
+
+.center{
+    margin: 0 auto 0 auto;
+}
+
+main{
+    height: 100%;
+}
+
+label::after{
+    width:150px;
+}

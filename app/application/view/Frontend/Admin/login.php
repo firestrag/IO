@@ -10,15 +10,17 @@
                                 <strong>Ubezpieczenia turystyczne</strong>
                             </h2>
 
-                            <h4 class="subtext-header mt-4 mb-5"><p>Ubezpieczenie turystyczne pozwala objąć ochroną zarówno podróż zagraniczną, jak i krajową.</p>
-                                <p>Szeroki zakres ochrony, możesz wybrać wariant dostosowany do swoich potrzeb.</p></h4>
+                            <h4 class="subtext-header mt-4 mb-5"><p>Panel Administracyjny</p></h4>
+
+<!--                            <h4 class="subtext-header mt-4 mb-5"><p>Ubezpieczenie turystyczne pozwala objąć ochroną zarówno podróż zagraniczną, jak i krajową.</p>-->
+<!--                                <p>Szeroki zakres ochrony, możesz wybrać wariant dostosowany do swoich potrzeb.</p></h4>-->
                         </div>
-                        <form method="post" action="login">
+                        <form method="post" action="admin-login">
                             <div style="background-color: #ffffff">
-                                <select name="id" class="mdb-select" style="background-color: #ffffff">
-                                    <option value="" disabled selected>Wybierz swoje konto</option>
-                                    <?php foreach( $users_list as $user): ?>
-                                        <option value="<?= $user['id']?>"><?=$user['imie'].' '.$user['nazwisko']?></option>
+                                <select  name="id" class="mdb-select" style="background-color: #ffffff">
+                                    <option value="" disabled selected>&nbsp;Wybierz konto administratora</option>
+                                    <?php foreach( $admin_list as $admin): ?>
+                                        <option value="<?= $admin['ID']?>"><?=$admin['imie'].' '.$admin['nazwisko']?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -36,8 +38,3 @@
         </div>
 
 </main>
-
-
-
-
-
