@@ -19,8 +19,8 @@ foreach ($insurances as $insurance):?>
 
             <!--Card image-->
             <div class="view gradient-card-header blue-gradient">
-                <h2 class="h2-responsive mb-2"><?=$insurance['name']?></h2>
-                <p class=""><i class="fa fa-calendar"></i> <?=$insurance['date_start'].' - '.$insurance['date_end']?></p>
+                <h2 class="h2-responsive mb-2"><?=ucfirst($insurance['nazwa'])?></h2>
+                <p class=""><i class="fa fa-calendar"></i> <?=$insurance['data_rozpoczecia'].' - '.$insurance['data_zakonczenia']?></p>
 
             </div>
             <!--/Card image-->
@@ -28,10 +28,13 @@ foreach ($insurances as $insurance):?>
             <!--Card content-->
             <div class="card-body text-center">
 
-                <p class="card-text mr-2 ml-2"><?=$insurance['description']?></p>
+                <p class="card-text mr-2 ml-2"><?=ucfirst($insurance['opis_polisy'])?></p>
 
                 <p class="orange-text mt-1 d-flex flex-row-reverse">
-                    Cena za miesiąc: <?=$insurance['price_per_month']?>zł
+                    Cena: <?=$insurance['cena']?>zł
+                </p>
+                <p class="orange-text mt-1 d-flex flex-row-reverse">
+                    Maksymalne odszkodowanie: <?=$insurance['max_odszkodowanie']?>zł
                 </p>
             </div>
             <!--/.Card content-->

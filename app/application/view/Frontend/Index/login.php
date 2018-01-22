@@ -1,4 +1,4 @@
-<main style="height: 100%;background-image: url('public/img/1.jpg');">
+<main style="height: 100%;background-image: url('public/img/1.jpg');content='width=device-width'">
 
     <div id="home" class="" data-jarallax='{"speed": 0.2}' style="padding-top:100px">
         <div class="full-bg-img">
