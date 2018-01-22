@@ -32,3 +32,11 @@ html, body{
 .center{
     margin: 0 auto 0 auto;
 }
+
+main{
+    height: 100%;
+}
+
+label::after{
+    width:150px;
+}

@@ -2,10 +2,12 @@
 
 class Account_IO extends Account_Core {
 
+    const GROUP_NAME = 'users';
 
     public static function getUserById($id){
-        $id = (int)$id;
-        return DB::query(DB::SELECT, "SELECT * FROM `klienci` WHERE `id` = $id");
+        return Model_User::get($id);
+//        $id = (int)$id;
+//        return DB::query(DB::SELECT, "SELECT * FROM `klienci` WHERE `id` = $id");
     }
 
     public function login(){
@@ -13,10 +15,14 @@ class Account_IO extends Account_Core {
         if(!$user){
             return false;
         }
-
         parent::setLoginId($user[0]['ID']);
+        parent::setAccountType(self::GROUP_NAME);
 
         return true;
+    }
+
+    public static function isLogin(){
+        return parent::isLogin(self::GROUP_NAME);
     }
 
     public function getId(){
