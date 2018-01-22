@@ -44,7 +44,6 @@ class Model_Insurances extends Model{
         $date_add = Date('Y-m-d');
         $query = "INSERT INTO `polisy_turystyczne`
                   VALUES (null,'$date_add','$date_from','$date_end','$price','$max_insurance','$user_id',NULL,'$insurance_id','$insurance_id',1)";
-        var_dump($query); die();
         return DB::query(DB::INSERT, $query);
     }
 }
