@@ -22,4 +22,20 @@ class Model_Insurances extends Model{
 
         DB::query(DB::SELECT, $query);
     }
+
+    public static function getAll(){
+        parent::$_table_name = self::$__table_name;
+        return parent::getAll();
+    }
+
+    public static function getInsurancesByUserId($user_id){
+        $user_id = (int)$user_id;
+        $query = "SELECT 
+          `nazwa`,`opis_polisy`,`cena`,`wt`.`max_odszkodowaniemax_odszkodowanie`,`data_rozpoczecia`,`data_zakonczenia` 
+          FROM `warianty_turystyczne` `wt` 
+          INNER JOIN `polisy_turystyczne` `pt` 
+            ON `pt`.`Warianty_turystyczne_ubezpieczenia_ID` = `wt`.`id`
+          WHERE `pt`.`Klienci_id` = '$user_id'";
+        return DB::query(DB::SELECT, $query);
+    }
 }
