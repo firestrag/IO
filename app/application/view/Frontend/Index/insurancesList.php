@@ -36,9 +36,6 @@ foreach ($insurances as $insurance):?>
                 <p class="orange-text mt-1 d-flex flex-row-reverse">
                     Maksymalne odszkodowanie: <?=$insurance['max_odszkodowanie']?>zł
                 </p>
-                <p>
-                    <a href="zawrzyj-ubezpieczenie/<?=$insurance['id']?>"><button type="submit"" class="btn btn-success btn-rounded">Przedłuż o miesiąc</button></a>
-                </p>
             </div>
             <!--/.Card content-->
 
