@@ -57,11 +57,14 @@ return [
         'controller' => 'Frontend_Index',
         'action' => 'insurancesList',
     ],
-
-
     'dodaj-ubezpieczenie' => [
-    'url' => [],
-    'controller' => 'Frontend_Admin',
-    'action' => 'addInsurance'
-],
+        'url' => [],
+        'controller' => 'Frontend_Admin',
+        'action' => 'addInsurance'
+    ],
+    'testy' => [
+        'url' => [],
+        'controller' => 'Frontend_Test',
+        'action' => 'runTest'
+    ],
 ];
