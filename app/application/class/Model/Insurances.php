@@ -20,7 +20,7 @@ class Model_Insurances extends Model{
         $query = "INSERT INTO `$table_name` (`nazwa`,`opis_polisy`,`skladka_miesieczna`,`max_odszkodowanie`,`ubezpieczenia_ID`)
                 VALUES('$name','$description','$price','$max_price','1')";
 
-        DB::query(DB::SELECT, $query);
+        return DB::query(DB::INSERT, $query);
     }
 
     public static function getAll(){

@@ -65,6 +65,6 @@ return [
     'testy' => [
         'url' => [],
         'controller' => 'Frontend_Test',
-        'action' => 'runTest'
+        'action' => 'index'
     ],
 ];
