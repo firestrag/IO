@@ -3,13 +3,27 @@
 class Controller_Frontend_Test extends Controller{
 
     public function action_index(){
-        $this->template->view = View::factory('Frontend/Test/Index');
+
+
+
+        $tests_results = [
+            'add_insurance' => $this->insertInsurance(),
+            'create_insurance' => $this->createInsurance()
+        ];
+
+
+        $this->template->view = View::factory('Frontend/Test/Index')
+        ->binf('tests_results', $tests_results);
+
+
     }
 
-    public function action_testMainPage1(){
 
+    private function insertInsurance(){
+        return (bool)Model_Insurances::create('test','testowe','110','1500');
+    }
 
-
-        $this->template->view = View::factory('Frontend/Test/test_main_page_1');
+    private function createInsurance(){
+        return (bool)Model_Insurances::add('1','1','2015-10-17','2018-11-15',777,999);
     }
 }
