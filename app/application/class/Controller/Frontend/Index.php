@@ -14,7 +14,7 @@ class Controller_Frontend_Index extends Controller{
 
 
     public function action_index(){
-        if(Account_Core::isLogin()){
+        if($this->auth->isLogin()){
             $this->action_mainPage();
         }else{
             $this->action_login();
@@ -37,13 +37,11 @@ class Controller_Frontend_Index extends Controller{
 	    $try_login = false;
 
         if(isset($_POST['action_login'])){
-
             $this->auth->login();
             $try_login = true;
         }
 
         if( $this->auth->isLogin() ){
-            var_dump('zalogowano');
             $this->action_index();
             return;
         }
@@ -65,36 +63,8 @@ class Controller_Frontend_Index extends Controller{
             'name' => 'name',
             'lastname' => 'lastname'
         ];
-        $insurances = [
-            [
-                'name' => 'Wycieczka zagraniczma',
-                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
-                'price_per_month' => '1920',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
-            ],
-            [
-                'name' => 'Wycieczka zagraniczma',
-                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
-                'price_per_month' => '1920',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
-            ],
-            [
-                'name' => 'Wycieczka zagraniczma',
-                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
-                'price_per_month' => '1920',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
-            ],
-            [
-                'name' => 'Wycieczka zagraniczma',
-                'description' => 'Wycieczka zagraniczna do arabskiego burdelu, gdzie czekają na ciebie chętne kozy',
-                'price_per_month' => '1920',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
-            ],
-        ];
+
+        $insurances = Model_Insurances::getInsurancesByUserId($this->auth->getId());
 
         $this->template->view = Power_View::factory('Frontend/Index/insurancesList')
             ->bind('insurances', $insurances)
@@ -103,32 +73,7 @@ class Controller_Frontend_Index extends Controller{
 
     public function action_insurancesAll(){
 
-        $insurances = [
-            [
-                'id' => '1',
-                'name' => 'Wycieczka zagraniczna',
-                'description' => 'Wycieczka zagraniczna do arabskiego burdelu',
-                'price_per_month' => '1920',
-                'date_start' => '2017-03-12',
-                'date_end' => '2017-04-11',
-            ],
-            [
-                'id' => '2',
-                'name' => 'Wycieczka w Polsce',
-                'description' => 'Obóz rekreacyjny',
-                'price_per_month' => '999',
-                'date_start' => '2018-03-12',
-                'date_end' => '2018-04-11',
-            ],
-            [
-                'id' => '3',
-                'name' => 'Ubezpieczenie rodzinne',
-                'description' => 'Ubezpieczenie całej rodziny na wakacyjny wyjazd',
-                'price_per_month' => '3200',
-                'date_start' => '2018-07-12',
-                'date_end' => '2018-08-11',
-            ],
-        ];
+        $insurances = Model_Insurances::getAll();
 
         $this->template->view = Power_View::factory('Frontend/Index/insurancesAll')
             ->bind('insurances', $insurances);
@@ -136,6 +81,29 @@ class Controller_Frontend_Index extends Controller{
 
     public function action_addInsurance(){
 //        Model_Insurances::add()
-        var_dump(Power_Params::getParam(1)); die();
+        $insurance_id = Power_Params::getParam(1);
+        $user_id = $this->auth->getId();
+        $date_from = $_POST['date_from_submit'];
+        $date_to = $_POST['date_to_submit'];
+
+        $insurance = Model_Insurances::get($insurance_id)[0];
+
+        $time_1 = strtotime($date_from);
+        $time_2 = strtotime($date_to);
+        $time = $time_2 - $time_1;
+
+
+        if($time <= 0){
+            $this->action_index();
+            return;
+        }
+
+        $k = ((int)($time/(30*24*60*60))+1);
+        $price = $k*$insurance['skladka_miesieczna'];
+
+
+        Model_Insurances::add($insurance_id, $user_id, $date_from, $date_to, $price, $insurance['max_odszkodowanie']);
+
+        $this->action_insurancesList();
     }
 }
