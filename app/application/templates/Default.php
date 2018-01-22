@@ -79,6 +79,22 @@
 <script>
     new WOW().init();
     $('.mdb-select').material_select();
+    $('.datepicker').pickadate({
+        monthsFull: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'],
+        monthsShort: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'],
+        weekdaysShort: ['Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Nie'],
+        weekdaysFull: ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'],
+        formatSubmit: 'yyyy-mm-dd',
+        labelMonthNext: 'Następny miesiąc',
+        labelMonthPrev: 'Poprzedni miesiąc',
+        labelMonthSelect: 'Wybierz miesiąc',
+        labelYearSelect: 'Wybierz rok',
+        selectMonths: true,
+        selectYears: true,
+        today: 'Dzisiaj',
+        clear: 'Wyczyść',
+        close: 'Anuluj'
+    });
 </script>
 
 </body>
